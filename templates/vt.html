@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 
 
+{% block css %}vt{% endblock %}
+
+
 {% block body %}
   <div class="root">
     {% if not is_front_page %}
       <hr>
-      {% block vt_title %}깉허브 (GITHUB){% endblock %}
+      {% block vt_club %}깉허브 (GITHUB){% endblock %}
       <br>
-      제  목: {{ title }}
+      제  목: {% block vt_title %}{{ title }}{% endblock %}
       <br>
       <hr>
     {% endif %}
-    {{ content }}
+    {% block content %}{{ content }}{% endblock %}
     <hr>
     {% block vt_menu %}{% endblock %}
     <br>
@@ -60,8 +63,3 @@ function focus()
 }
   </script>
 {% endblock script %}
-
-
-{#
-vim: ft=jinjahtml:ts=2:sts=2:sw=2
-#}

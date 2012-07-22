@@ -4,14 +4,13 @@
     {% block head %}
       <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
       <meta name="viewport" content="width=device-width" />
-      <link rel="stylesheet" media="screen" href="http://z1.enha.kr/{{ css }}.css" />
+      <link rel="stylesheet" media="screen" href="{{ media_path }}/{% block css %}{{ css }}{% endblock %}.css" />
     {% endblock %}
   </head>
   <body>
     {% block body %}{% endblock %}
-    <script type="text/javascript" src="http://z1.enha.kr/wiki.js"></script>
+    {% block script %}
+      <script type="text/javascript" src="{{ media_path }}/wiki.js"></script>
+    {% endblock %}
   </body>
 </html>
-{#
-vim: ft=jinjahtml:ts=2:sts=2:sw=2
-#}
