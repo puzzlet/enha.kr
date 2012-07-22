@@ -1,0 +1,6 @@
+[submodule "enha.kr"]
+	path = enha.kr
+	url = git://github.com/puzzlet/enha.kr.git
+[submodule "deploy"]
+	path = deploy
+	url = git@github.com:puzzlet/enha.kr.git
