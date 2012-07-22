@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+          <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <meta name="viewport" content="width=device-width" />
+      <link rel="stylesheet" media="screen" href="media/vt.css" />
+      </head>
+  <body>
+      <div class="root">
+          <hr>
+      깉허브 (GITHUB)      <br>
+      제  목: 
+      <br>
+      <hr>
+        텍스트
+    <hr>
+        <br>
+    <div id="cmd">
+      <span>선택&gt; </span>
+      <span></span>
+      <div id="cursor"></div>
+    </div>
+    <input class="input" type="input">
+  </div>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript">
+// http://stackoverflow.com/questions/3758023/how-to-use-this-square-cursor-in-a-html-input-field
+var cursor;
+
+$(function() {
+  focus();
+  $(window).scrollTop(0);
+  $('#cmd').click(focus);
+
+  $('input').keyup(function(e) {
+    $('#cmd span:last').text($(this).val());
+  });
+    
+  $('input').blur(function() {
+     clearInterval(cursor);
+     $('#cursor').css({ visibility: 'visible' });    
+  });
+});
+
+
+function focus()
+{
+  $('input').focus();
+  cursor = window.setInterval(function() {
+  if ($('#cursor').css('visibility') === 'visible') {
+    $('#cursor').css({ visibility: 'hidden' });
+  } else {
+    $('#cursor').css({ visibility: 'visible' });  
+  }  
+  }, 500);
+}
+  </script>
+  </body>
+</html>

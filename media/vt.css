@@ -1,0 +1,171 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* end of reset */
+body
+{
+  border: 0;
+  margin: 0;
+  background-color: #000080;/*#314CA3;*/
+}
+body,div.root,td,input
+{
+  color: #FFFFFF;
+  font-family: "Fixedsys", "돋움체", "Vera Sans Mono", "DejaVu Sans Mono", monospace;
+  font-size: 16px;
+  font-weight: 900;
+}
+div.root,td
+{
+  margin: 0;
+  width: 80ex;
+  margin: auto;
+  word-break: break-all;
+  line-height: 120%;
+}
+tt
+{
+  font-size: inherit;
+  font-family: inherit;
+}
+tt.wiki
+{
+  display: none;
+}
+hr
+{
+  margin: 0.8ex 0;
+  border: 1px solid #FFFFFF;
+}
+table
+{
+  border-collapse: collapse;
+  margin: 1ex;
+}
+td
+{
+  border: 2px solid #FFFFFF;
+  padding: 1ex;
+}
+table.closure
+{
+  margin: 0;
+}
+table.closure td
+{
+  border: 0;
+  padding: 0;
+  background: #008000;
+}
+li:before
+{
+  content: " * ";
+  margin: 0 0 0 1em;
+}
+li
+{
+  list-style-type: none;
+}
+a
+{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+a.wiki:before
+{
+  content: "/%22%3B%0A%7D%0Aa.wiki%3Aafter%0A%7B%0A%20%20content%3A%20%22";
+}
+a.external:before
+{
+  content: "[";
+}
+a.external:after
+{
+  content: "]";
+}
+a:hover
+{
+  border-left: ridge 2px #FFFFFF;
+  border-top: ridge 2px #FFFFFF;
+  border-right: ridge 2px #666666;
+  border-bottom: ridge 2px #666666;
+  margin: -2px;
+}
+del{text-decoration: none}
+del:before{content:"~~"}
+del:after{content:"~~"}
+
+input.input
+{
+/*
+  background-color: #000080;
+  border: 0 none;
+  -webkit-appearance: none;
+  -webkit-user-select: auto;
+*/
+  width: 0;
+  height: 1px;
+  opacity: 0;
+}
+
+#cmd
+{
+  overflow: hidden;
+}
+
+#cmd span {
+  float: left; 
+  white-space: pre;
+}
+
+#cursor
+{
+  float: left;
+  width: 0.5em;
+  height: 1em;
+  background-color: #FFFFFF;
+}
