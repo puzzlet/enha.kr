@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+  <div class="root">
+    {% if not is_front_page %}
+      <hr>
+      {% block vt_title %}깉허브 (GITHUB){% endblock %}
+      <br>
+      제  목: {{ title }}
+      <br>
+      <hr>
+    {% endif %}
+    {{ content }}
+    <hr>
+    {% block vt_menu %}{% endblock %}
+    <br>
+    <div id="cmd">
+      <span>선택&gt; </span>
+      <span></span>
+      <div id="cursor"></div>
+    </div>
+    <input class="input" type="input">
+  </div>
+{% endblock body %}
+
+
+{% block script %}
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript">
+// http://stackoverflow.com/questions/3758023/how-to-use-this-square-cursor-in-a-html-input-field
+var cursor;
+
+$(function() {
+  focus();
+  $(window).scrollTop(0);
+  $('#cmd').click(focus);
+
+  $('input').keyup(function(e) {
+    $('#cmd span:last').text($(this).val());
+  });
+    
+  $('input').blur(function() {
+     clearInterval(cursor);
+     $('#cursor').css({ visibility: 'visible' });    
+  });
+});
+
+
+function focus()
+{
+  $('input').focus();
+  cursor = window.setInterval(function() {
+  if ($('#cursor').css('visibility') === 'visible') {
+    $('#cursor').css({ visibility: 'hidden' });
+  } else {
+    $('#cursor').css({ visibility: 'visible' });  
+  }  
+  }, 500);
+}
+  </script>
+{% endblock script %}
+
+
+{#
+vim: ft=jinjahtml:ts=2:sts=2:sw=2
+#}
