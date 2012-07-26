@@ -61,5 +61,39 @@ function focus()
   }  
   }, 500);
 }
+
+
+function url_to_go(i) {
+  var a = $('#link-'+i);
+  if (a.length) {
+    var href = a.attr('href');
+    if (href) {
+      return href;
+    }
+  }
+  return null;
+}
+
+
+$(function() {
+  $('input').keyup(function(e) {
+    if (e.keyCode == 13)
+    {
+      var tokens = $(this).val().split(' ');
+      if (tokens.length < 1)
+        return;
+      var cmd = tokens[0].toLowerCase();
+      var href = url_to_go(cmd);
+      if (href) {
+        window.location = href;
+        return;
+      }
+
+      $(this).val("");
+      window.location.reload();
+      return;
+    }
+  });
+});
   </script>
 {% endblock script %}
