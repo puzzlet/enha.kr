@@ -1,0 +1,38 @@
+body, a, img{border:0;margin:0;padding:0}
+body{font-size:9pt;font-family:sans-serif;word-break:break-all}
+form{display:inline}
+a{text-decoration:none}
+a:hover{text-decoration:underline}
+a.nonexistent{color:gray}
+a.external,a.externalLink{color:#090}
+em.underline{font-style:normal;text-decoration:underline}
+div.indent{margin-left:1em}
+table.center{margin-left:auto;margin-right:auto}
+table.right{float:right}
+table.wiki{border-collapse:collapse}
+table.closure,div.quote{border:1px solid #000}
+div.quote{margin-left:1em}
+div.system{margin:2em 1em}
+.system .placeholder{margin:7em;text-align:center}
+#cse td{border:0}
+div.root{clear:both;width:820px;margin:0 auto}
+header{position:relative}
+nav{display:block;padding:0.5em 1em;background-color:#000;color:#FFF}
+nav .wrapper{position:relative}
+nav a{position:absolute;top:50%;margin-top:-0.62em;line-height:1.24em;font-size:large;color:#FFF}
+nav a:hover{color:yellow}
+nav input{margin:0;font-size:large}
+nav input.input{border:0}
+section#_toolbox{display:block;background:#EEE}
+.root-article #_toolbox{float:right;width:185px;margin:0 0 2em}
+.root-system #_toolbox{border-left:1px solid #000;border-right:1px solid #000}
+#_toolbox ul{margin:0;padding:0.2em 0}
+#_toolbox li{float:left;margin:0 0 0 2em;padding:0.2em 0}
+.root-system #_toolbox li{float:left}
+#_toolbox a.external:before,#wikiBody a.external:before{padding:0 0.1em;background:green;color:white;content:"外"}
+section#_core{padding:20px 15px 10px;border:1px solid #000;border-top:none;line-height:150%}
+.root-article #_core{display:block;clear:left;float:left;width:603px}
+h1.wikiTitle{margin:0 0 1.5em;font-size:x-large}
+article footer{margin-top:2em}
+div.disclaimer{display:block;clear:left;padding:0.5em 0;text-align:center}
+.root-article div.disclaimer{width:635px}

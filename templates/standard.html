@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+
+{% block css %}standard{% endblock %}
+
+
+{% block head %}
+  {{ super() }}
+  <title>{% block title %}{{ title }}{% endblock %}</title>
+{% endblock %}
+
+
+{% block body %}
+  {# FIXME: Weird identation ahead #}
+  {% if is_system_page %}
+  <div class="root root-system">
+  {% else %}
+  <div class="root root-article">
+  {% endif %}
+
+    <header>
+      <nav>
+        {% block nav %}
+          <a href="/">{{ site_name }}</a>
+        {% endblock nav %}
+      </nav>
+      <div style="clear:both"></div>
+      {% block toolbox %}
+        <section id="_toolbox">
+        </section>
+      {% endblock toolbox %}
+    </header>
+
+    <section id="_core">
+      {% block content_title %}
+        <h1 class="wikiTitle">{{ title }}</h1>
+      {% endblock content_title %}
+      {% block container %}
+        <div class="body">
+          <article>
+            {% block content %}{{ content }}{% endblock %}
+            {% block footer %}{% endblock %}
+          </article>
+        </div>{# class="body" #}
+      {% endblock container %}
+    </section>{# #_core #}
+
+    {% block sidebar %}{% endblock %}
+
+  </div>{# .root #}
+
+{% endblock %}
+
+
+{#
+vim: ft=jinjahtml:ts=2:sts=2:sw=2
+#}
