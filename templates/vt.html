@@ -14,7 +14,7 @@
       <br>
       <hr>
     {% endif %}
-    {% block content %}{{ content }}{% endblock %}
+    {% block content %}{{ content | safe }}{% endblock %}
     <hr>
     {% block vt_menu %}{% endblock %}
     <br>

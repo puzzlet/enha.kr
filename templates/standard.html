@@ -1,9 +1,6 @@
 {% extends "base.html" %}
 
 
-{% block css %}standard{% endblock %}
-
-
 {% block head %}
   {{ super() }}
   <title>{% block title %}{{ title }}{% endblock %}</title>
@@ -11,6 +8,12 @@
 
 
 {% block body %}
+  {% if boilerplate_message %}
+    <div class="boilerplate">
+      {{ boilerplate_message | safe }}
+    </div>
+  {% endif %}
+
   {# FIXME: Weird identation ahead #}
   {% if is_system_page %}
   <div class="root root-system">
@@ -21,7 +24,7 @@
     <header>
       <nav>
         {% block nav %}
-          <a href="/">{{ site_name }}</a>
+          <a href="/">엔하위키 미러 on GitHub</a>
         {% endblock nav %}
       </nav>
       <div style="clear:both"></div>
