@@ -34,6 +34,8 @@
       {% endblock toolbox %}
     </header>
 
+    {% block sidebar %}{% endblock %}
+
     <div id="_core">
       {% block content_title %}
         <h1 class="wikiTitle">{{ title }}</h1>
@@ -42,13 +44,13 @@
         <div class="body">
           <article>
             {% block content %}{{ content }}{% endblock %}
-            {% block footer %}{% endblock %}
+            {% block content_footer %}{% endblock %}
           </article>
         </div>{# class="body" #}
       {% endblock container %}
     </div>{# #_core #}
 
-    {% block sidebar %}{% endblock %}
+    {% block footer %}{% endblock %}
 
   </div>{# .root #}
 
